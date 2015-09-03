@@ -11,10 +11,14 @@
 <img id="image" src="https://www.carthage.edu/live/image/gid/46/3711_computerscience-banner-final.jpg"/>
 <button id="addMember" onclick = "authorize();">Enter Password</button>
 <button id="addMember" onclick = "goToExercises();">Go to Exercises</button>
+<button id="addMember" onclick = "seeClubActivities();">See Club Activities</button>
 <style>#image{width:500px; height;500px;}</style>
 <script>
 var authorized = false; 
 var url = "https://testmoz.com/554099/";
+var imageUrl = "https://developer.apple.com/assets/elements/icons/128x128/Xcode6.png";
+var imageUrlTwo = "http://beebom.com/wp-content/uploads/2015/04/java.png";
+var imageUrlThree = "http://www.unixstickers.com/image/cache/data/stickers/python/python.sh-600x600.png";
 function authorize(){
   var pass = prompt("Enter your password:"); 
   if(pass == "comsci"){
@@ -25,6 +29,22 @@ function authorize(){
     authorize();
   }
 
+}
+function createImage(id, source){
+  var a = document.createElement("IMG");
+  a.setAttribute("id", id);
+  a.setAttribute("src", source);
+  document.body.appendChild(a);
+}
+function seeClubActivities(){
+  if(authorized){
+    createImage("image", imageUrl);
+    createImage("image", imageUrlTwo);
+    createImage("image", imageUrlThree);
+  }
+  else{
+    alert("You are not authorized!");
+  }
 }
 function goToExercises(){
   if(authorized){
