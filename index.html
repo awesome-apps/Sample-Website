@@ -9,7 +9,7 @@
 <h2 id="Title">Do Exercises</h2>
 <style>#addMember{font-family:"Comic Sans MS"; background-color:rgb(0, 115, 255); border-style:outset;}</style>
 <background src="https://www.carthage.edu/live/image/gid/46/3711_computerscience-banner-final.jpg"></background>
-
+<style>#xcode{width:300px; height:300px;}</style>
 <button id="addMember" onclick = "authorize();">Enter Password</button>
 <button id="addMember" onclick = "goToExercises();">Go to Exercises</button>
 <button id="addMember" onclick = "seeClubActivities();">See Club Activities</button>
@@ -39,7 +39,7 @@ function createImage(id, source){
 }
 function seeClubActivities(){
   if(authorized){
-    createImage("image", imageUrl);
+    createImage("xcode", imageUrl);
     createImage("image", imageUrlTwo);
     createImage("image", imageUrlThree);
   }
