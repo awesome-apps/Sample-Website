@@ -1,2 +1,2 @@
-Sample-Website
+Club-Website
 ==============
