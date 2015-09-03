@@ -21,13 +21,18 @@ var imageUrl = "https://developer.apple.com/assets/elements/icons/128x128/Xcode6
 var imageUrlTwo = "http://beebom.com/wp-content/uploads/2015/04/java.png";
 var imageUrlThree = "http://www.unixstickers.com/image/cache/data/stickers/python/python.sh-600x600.png";
 function authorize(){
-  var pass = prompt("Enter your password:"); 
-  if(pass == "comsci"){
-    authorized = true;
-  }
+  if authorize == false:
+    
+    var pass = prompt("Enter your password:"); 
+    if(pass == "comsci"){
+      authorized = true;
+    }
+    else{
+      authorized = false;
+      authorize();
+    }
   else{
-    authorized = false;
-    authorize();
+    alert("You are already authorized!");
   }
 
 }
