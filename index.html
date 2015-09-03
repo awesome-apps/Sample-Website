@@ -1,5 +1,28 @@
 <h1 id="Title">Computer Science and Electronics Club Examinations</h1>
 <style>#Title{font-family:"Comic Sans MS";}</style>
-<iframe id="frame" src="https://testmoz.com/554036"/>
-<style>#frame{width:500px; height:500px;}</style>
+<h2 id="Title">Members</h2>
+<style>#addMember{font-family:"Comic Sans MS"; background-color:blue}</style>
+<button id="addMember" onclick = "authorize();">Enter Password</button>
+<button id="addMember" onclick = "goToExercises();">Go to Exercises</button>
+<script>
+var authorized = false; 
+var url = "https://testmoz.com/554099/";
+function authorize(){
+  var pass = prompt("Enter your password:"); 
+  if(pass == "comsci"){
+    authorized = true;
+  }
+  else{
+    authorized = false;
+    authorize();
+  }
 
+}
+function goToExercises(){
+  if(authorized){
+    var x = document.createElement("IFRAME");
+    x.setAttribute("src", url);
+    document.body.appendChild(x);
+  }
+}
+</script>
