@@ -18,6 +18,7 @@ def stuff():
     while x <= len(messages):
         s.send(messages[x])
         x += 1
-    
+    string = "stuff"
+    return string
     s.close()
 
