@@ -4,4 +4,4 @@ text = tag.innerHTML;
 // Here I would like to call the Python interpreter with Python function
 arrOfStrings = openSomehowPythonInterpreter("~/client.py", "stuff()");
 
-~/pythoncode.py
+~/client.py
